@@ -15,6 +15,8 @@ import {
   shareDocument, updateDocument, parseEditLink, slugify, viewPath, MAX_SIZE,
 } from './html-cloud/share-core.js';
 
+import { BASE_URL } from './settings.js';
+
 export { MAX_SIZE };
 
 const EXPIRES = ['7', '30', 'never'];
@@ -23,7 +25,7 @@ const EXPIRES = ['7', '30', 'never'];
 const CLIENT_HEADERS = { 'X-HTML-Cloud-Client': 'mcp' };
 
 function resolveBaseUrl(baseUrl) {
-  return (baseUrl ?? process.env.HTML_CLOUD_URL ?? 'https://html.cloud').replace(/\/+$/, '');
+  return (baseUrl ?? BASE_URL).replace(/\/+$/, '');
 }
 
 function encodeHtml(html) {

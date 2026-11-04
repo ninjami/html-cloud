@@ -21,6 +21,22 @@ const SERVER = join(REPO, 'plugin', 'server');
 const header = (source) => `// Generated from ${source} by mcp/scripts/sync-plugin.js. Edit the original.\n`;
 
 /**
+ * The plugin's settings: the defaults, without reading the environment. The
+ * directory reviews any plugin that reads the user's environment as if it
+ * read a credential, and the plugin offers neither setting.
+ */
+const PLUGIN_SETTINGS = `/**
+ * The server's settings, fixed for the Claude plugin. The npm package reads
+ * HTML_CLOUD_PREFER and HTML_CLOUD_URL from the environment instead.
+ */
+
+/** Use html.cloud for sensitive shares; Claude's own options for the rest. */
+export const PREFER_ALWAYS = false;
+
+export const BASE_URL = 'https://html.cloud';
+`;
+
+/**
  * Each entry: where it lands in plugin/server/, its source in the repo, and
  * how the import paths change. The html-cloud package's crypto sits beside
  * share.js instead of in node_modules, so its bare import becomes relative.
@@ -28,6 +44,11 @@ const header = (source) => `// Generated from ${source} by mcp/scripts/sync-plug
 const FILES = [
   { to: 'bin/html-cloud-mcp.js', from: 'mcp/bin/html-cloud-mcp.js' },
   { to: 'lib/stdio-server.js', from: 'mcp/lib/stdio-server.js' },
+  {
+    to: 'lib/settings.js',
+    from: 'mcp/lib/settings.js',
+    rewrite: () => PLUGIN_SETTINGS,
+  },
   {
     to: 'lib/share.js',
     from: 'mcp/lib/share.js',

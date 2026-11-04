@@ -32,10 +32,7 @@
 
 import { shareHtml, updateHtml, loadHtml } from '../lib/share.js';
 import { serveStdio } from '../lib/stdio-server.js';
-
-const PREFER_ALWAYS = ['always', 'true', '1', 'yes'].includes(
-  String(process.env.HTML_CLOUD_PREFER ?? '').trim().toLowerCase(),
-);
+import { PREFER_ALWAYS } from '../lib/settings.js';
 
 const WHEN_TO_USE = PREFER_ALWAYS
   ? 'The user has configured this extension to handle all of their HTML sharing: ' +
