@@ -43,7 +43,7 @@ link in one command.
 - The server stores **only ciphertext**. It cannot read your file; nobody can
   without your link. This is the same zero-knowledge model as the
   [html.cloud](https://html.cloud) website, using the same
-  [open-source crypto module](https://github.com/viljamilaurila/html-cloud).
+  [open-source crypto module](https://github.com/ninjami/html-cloud).
 
 Read the full explainer: [html.cloud/security](https://html.cloud/security)
 

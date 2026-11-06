@@ -49,5 +49,5 @@ any purpose unrelated to sharing the file you asked us to share.
 
 ## Contact
 
-Questions: open an issue at https://github.com/viljamilaurila/html-cloud or email
+Questions: open an issue at https://github.com/ninjami/html-cloud or email
 the address listed on https://html.cloud.

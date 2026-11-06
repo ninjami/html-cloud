@@ -75,7 +75,7 @@
   <h2 class="content-h2">Contact</h2>
   <p class="content-p">
     Questions: open an issue at
-    <a href="https://github.com/viljamilaurila/html-cloud" rel="noopener" target="_blank">github.com/viljamilaurila/html-cloud</a>
+    <a href="https://github.com/ninjami/html-cloud" rel="noopener" target="_blank">github.com/ninjami/html-cloud</a>
     or email the address listed on <a href="{{ route('home') }}">html.cloud</a>.
   </p>
 </section>

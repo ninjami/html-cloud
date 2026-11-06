@@ -166,8 +166,8 @@ Full policy: [html.cloud/mcp-privacy](https://html.cloud/mcp-privacy).
 - **Retention.** A page is unavailable from the moment its link expires (7 or
   30 days, or never if you chose that) and its ciphertext is permanently
   deleted by a daily clean-up; deleting via the edit link removes it at once.
-- **Contact.** Email [viljami@liito.io](mailto:viljami@liito.io) or open an
-  issue at [github.com/viljamilaurila/html-cloud](https://github.com/viljamilaurila/html-cloud/issues).
+- **Contact.** Email [viljami@ninjami.com](mailto:viljami@ninjami.com) or open an
+  issue at [github.com/ninjami/html-cloud](https://github.com/ninjami/html-cloud/issues).
 
 ## Honest threat model
 
@@ -175,4 +175,4 @@ Anyone with the share link can read the file — the link is the credential.
 The server can expire or delete ciphertext but can never read it. See
 [html.cloud/security](https://html.cloud/security) for details and limitations.
 
-Source: [github.com/viljamilaurila/html-cloud](https://github.com/viljamilaurila/html-cloud) · MIT
+Source: [github.com/ninjami/html-cloud](https://github.com/ninjami/html-cloud) · MIT

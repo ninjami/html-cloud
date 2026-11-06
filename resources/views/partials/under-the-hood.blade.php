@@ -57,6 +57,6 @@ POST /api/documents { blob, editHash }                   <span class="uth-c">// 
   <div class="uth-links">
     <a href="{{ route('security') }}">How the encryption works →</a>
     <a href="{{ route('security') }}#threat-model">What it doesn’t protect against →</a>
-    <a href="https://github.com/viljamilaurila/html-cloud" rel="noopener" target="_blank">Read the source on GitHub ↗</a>
+    <a href="https://github.com/ninjami/html-cloud" rel="noopener" target="_blank">Read the source on GitHub ↗</a>
   </div>
 </section>

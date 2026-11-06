@@ -30,7 +30,7 @@
   "homepage": "https://html.cloud",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/viljamilaurila/html-cloud.git",
+    "url": "git+https://github.com/ninjami/html-cloud.git",
     "directory": "cli"
   },
   "license": "MIT"

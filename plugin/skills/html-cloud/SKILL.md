@@ -25,58 +25,53 @@ feature is fine. When unsure, ask the user which they prefer.
 
 ## How to share
 
-Prefer the MCP tools when they are available; otherwise use the CLI. If you
-have neither the tools nor a shell (for example, in claude.ai chat), give the
-user the finished page as a file and tell them they can upload it at
-https://html.cloud to get the same kind of private link.
+Use the `html-cloud` command-line tool. It encrypts the page in its own
+process on the user's computer and uploads only ciphertext. It needs a shell
+and Node.js 20 or later. If you have no shell (for example, in claude.ai
+chat), give the user the finished page as a file and tell them they can
+upload it at https://html.cloud to get the same kind of private link.
 
-### With the MCP server (`share_html`, `update_html`)
-
-Not installed? For Claude Code: `claude mcp add html-cloud -- npx -y html-cloud-mcp`.
-Other clients: add `{"command": "npx", "args": ["-y", "html-cloud-mcp"]}` to the
-MCP config. Requires Node.js 20+.
+If the html.cloud MCP tools (`share_html`, `update_html`) happen to be
+connected, you can use them instead; they do the same thing.
 
 1. Build a **self-contained** HTML document: inline CSS and scripts, images as
    `data:` URIs or absolute `https://` URLs. Relative paths will not resolve.
-2. Call `share_html` with either `html` (inline) or `path` (an absolute path to
-   an `.html` file). Use `path` for large pages: hosts limit the size of a
-   tool argument.
-3. Optional: `expires` (`"7"`, `"30"`, or `"never"`; default 30 days) and
-   `link_name` (a short readable name added to the link, such as
-   `"Q3 sales report"`).
-4. Give the user the **share link**. Tell them the **edit link** is private: it
+   Write it to an `.html` file.
+2. Share it:
+
+   ```sh
+   npx -y html-cloud@0.3.1 ./report.html                     # 30 days (default)
+   npx -y html-cloud@0.3.1 ./report.html --expires 7         # 7, 30, or never
+   npx -y html-cloud@0.3.1 ./report.html --name "Q3 report"  # readable link name
+   npx -y html-cloud@0.3.1 ./report.html --no-name           # no name in the link
+   ```
+
+   It prints a **share link** and an **edit link**.
+3. Give the user the **share link**. Tell them the **edit link** is private: it
    can replace the page, change the expiry, or delete it.
-
-### With the CLI
-
-```sh
-npx html-cloud ./report.html               # prints share link + edit link
-npx html-cloud ./report.html --expires 7   # 7, 30 (default), or never
-cat page.html | npx html-cloud -           # from stdin
-```
 
 ## Changing a page that is already shared
 
 Do **not** share a second copy. Update the existing one so the link the user
-already sent keeps working:
+already sent keeps working. Pass the **full** revised file, not a diff:
 
-- MCP: call `update_html` with the `edit_link` from earlier and the **full**
-  revised HTML (not a diff), as `html` or `path`. If the page was shared with
-  a `link_name`, use the same one again.
-- CLI: `npx html-cloud ./report.html --update "<edit link>"`
+```sh
+npx -y html-cloud@0.3.1 ./report.html --update "<edit link>"
+```
 
 The share link and the expiry stay the same.
 
 ## Rules
 
-- **`link_name` is not encrypted.** It is visible in the link and to the server.
+- **The link name is not encrypted.** It is visible in the link and to the server.
   Keep it generic, and leave it out when the title itself is confidential
   (names of people, clients, deals, medical or legal matters). The CLI uses
-  the file name by default; add `--no-name` in that case.
+  the file name by default, so pass `--no-name` in that case, or a generic
+  `--name`.
 - **Anyone with the share link can read the page.** When the content is
   sensitive, tell the user to send the link only to the people meant to read it.
 - **Keep the edit link out of anything shared.** Don't put it in the page, a
   commit, or a message to the recipients.
 - Limits: one HTML file, at most 10 MB.
 
-More detail: https://html.cloud/security · Source: https://github.com/viljamilaurila/html-cloud
+More detail: https://html.cloud/security · Source: https://github.com/ninjami/html-cloud

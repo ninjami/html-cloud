@@ -11,10 +11,12 @@
 <h1 class="content-title">Privacy policy</h1>
 <p class="content-lead">
   The html.cloud MCP server (<code>html-cloud-mcp</code>) is built so that we <em>cannot</em> see
-  the pages Claude shares through it. It is the same server whether you use the html.cloud plugin
-  for Claude (Claude Code and Cowork), the Claude Desktop extension, or add it to another MCP
-  client yourself. This page explains exactly what it does with your data.
-  <span class="content-updated">Last updated 2026-10-22.</span>
+  the pages Claude shares through it. It is the same server whether you use the Claude Desktop
+  extension or add it to another MCP client yourself. The html.cloud plugin for Claude (Claude Code
+  and Cowork) shares the same way through the <code>html-cloud</code> command-line tool: it encrypts
+  on your computer, reads only the one <code>.html</code> file Claude passes to it, and sends the
+  same data to html.cloud as described below. This page explains exactly what both do with your data.
+  <span class="content-updated">Last updated 2026-11-06.</span>
 </p>
 
 <section class="content-section">
@@ -83,10 +85,10 @@
 <section class="content-section">
   <h2 class="content-h2">Contact</h2>
   <p class="content-p">
-    Questions or requests: email <a href="mailto:viljami@liito.io">viljami@liito.io</a> or open an
-    issue at <a href="https://github.com/viljamilaurila/html-cloud/issues" rel="noopener" target="_blank">github.com/viljamilaurila/html-cloud</a>.
-    The server's source code is in the <code>mcp/</code> directory of that repository, and the
-    plugin's in <code>plugin/</code>.
+    Questions or requests: email <a href="mailto:viljami@ninjami.com">viljami@ninjami.com</a> or open an
+    issue at <a href="https://github.com/ninjami/html-cloud/issues" rel="noopener" target="_blank">github.com/ninjami/html-cloud</a>.
+    The server's source code is in the <code>mcp/</code> directory of that repository, the
+    command-line tool's in <code>cli/</code>, and the plugin's in <code>plugin/</code>.
   </p>
 </section>
 @endsection

@@ -4,7 +4,7 @@
     <a href="{{ route('mcp') }}" class="topbar-link topbar-link-claude" title="Let Claude share your HTML for you">For Claude</a>
     <a href="{{ route('uploads') }}" class="topbar-link">Your uploads</a>
     <span class="topbar-tagline">{{ $tagline ?? 'encrypted in your browser' }}</span>
-    <a href="https://github.com/viljamilaurila/html-cloud" class="topbar-github" rel="noopener" target="_blank" title="html.cloud is open source — read the code on GitHub">
+    <a href="https://github.com/ninjami/html-cloud" class="topbar-github" rel="noopener" target="_blank" title="html.cloud is open source — read the code on GitHub">
       @include('partials.github-icon', ['size' => 16])
       <span class="topbar-github-label">Open source</span>
     </a>

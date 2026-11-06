@@ -25,7 +25,7 @@
   "url": "{{ config('app.url') }}",
   "logo": "{{ config('app.url') }}/apple-touch-icon.png",
   "sameAs": [
-    "https://github.com/viljamilaurila/html-cloud",
+    "https://github.com/ninjami/html-cloud",
     "https://www.npmjs.com/package/html-cloud"
   ]
 }

@@ -285,7 +285,7 @@
     <li><strong>You trust us to serve honest code.</strong> The encryption runs in JavaScript we serve,
       so a compromised or malicious server could in principle ship code that leaks a key. This is the
       standard trust caveat for all browser-based encryption — and it is why html.cloud is
-      <a href="https://github.com/viljamilaurila/html-cloud" rel="noopener" target="_blank">open source</a>:
+      <a href="https://github.com/ninjami/html-cloud" rel="noopener" target="_blank">open source</a>:
       you can read exactly what runs in your browser and confirm it does what this page says.</li>
     <li><strong>No protection against a compromised device.</strong> If your machine or browser is
       compromised, the plaintext is readable before it is ever encrypted. Client-side encryption can’t
@@ -315,7 +315,7 @@
       blob size, your expiry, and an auth hash — and nothing that could decrypt your file.</li>
   </ul>
   <p class="content-p">
-    <a class="source-link" href="https://github.com/viljamilaurila/html-cloud" rel="noopener" target="_blank">@include('partials.github-icon', ['size' => 16]) Read the source on GitHub →</a>
+    <a class="source-link" href="https://github.com/ninjami/html-cloud" rel="noopener" target="_blank">@include('partials.github-icon', ['size' => 16]) Read the source on GitHub →</a>
   </p>
 </section>
 
@@ -345,7 +345,7 @@
     <details class="faq-item">
       <summary>Is html.cloud open source?</summary>
       <p>Yes. The code is public on
-        <a href="https://github.com/viljamilaurila/html-cloud" rel="noopener" target="_blank">GitHub</a>,
+        <a href="https://github.com/ninjami/html-cloud" rel="noopener" target="_blank">GitHub</a>,
         so you can verify exactly how the encryption works and what the server stores rather than taking
         our word for it.</p>
     </details>

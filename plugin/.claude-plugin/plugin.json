@@ -1,18 +1,18 @@
 {
   "name": "html-cloud",
   "displayName": "html.cloud",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "Share HTML that Claude makes as a private, end-to-end encrypted link, and update it later at the same link. The page is encrypted on your computer; html.cloud stores only ciphertext it cannot read. No account.",
   "author": {
     "name": "Viljami Laurila",
-    "email": "viljami@liito.io",
+    "email": "viljami@ninjami.com",
     "url": "https://html.cloud"
   },
   "homepage": "https://html.cloud/mcp",
   "documentationUrl": "https://html.cloud/mcp",
   "privacyPolicyUrl": "https://html.cloud/mcp-privacy",
-  "supportUrl": "https://github.com/viljamilaurila/html-cloud/issues",
-  "repository": "https://github.com/viljamilaurila/html-cloud",
+  "supportUrl": "https://github.com/ninjami/html-cloud/issues",
+  "repository": "https://github.com/ninjami/html-cloud",
   "license": "MIT",
   "keywords": ["html", "share", "encrypted", "private-link", "zero-knowledge", "reports", "artifacts"]
 }

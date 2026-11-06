@@ -67,7 +67,7 @@ PRIVACY BY DESIGN
 One-time setup: Chrome asks you to allow the extension to access local files so
 the Share button can appear on .html pages. The extension walks you through it.
 
-Open source: https://github.com/viljamilaurila/html-cloud
+Open source: https://github.com/ninjami/html-cloud
 ```
 
 ---

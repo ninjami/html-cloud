@@ -143,7 +143,7 @@ Encrypted locally with AES-256-GCM · expires in 30 days · the server never saw
     </div>
     <div class="faq-item">
       <h3 class="content-h3">Where does the encryption happen?</h3>
-      <p class="content-p">In the CLI process on your machine, before any upload. The package is <a href="https://www.npmjs.com/package/html-cloud" rel="noopener" target="_blank">on npm</a> and the source is <a href="https://github.com/viljamilaurila/html-cloud" rel="noopener" target="_blank">on GitHub</a> — it shares one crypto module with the web client, so you can verify this rather than trust it.</p>
+      <p class="content-p">In the CLI process on your machine, before any upload. The package is <a href="https://www.npmjs.com/package/html-cloud" rel="noopener" target="_blank">on npm</a> and the source is <a href="https://github.com/ninjami/html-cloud" rel="noopener" target="_blank">on GitHub</a> — it shares one crypto module with the web client, so you can verify this rather than trust it.</p>
     </div>
     <div class="faq-item">
       <h3 class="content-h3">Can I replace or delete a file I shared?</h3>

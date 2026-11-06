@@ -18,7 +18,8 @@ class McpPrivacyPageTest extends TestCase
         $response = $this->get('/mcp-privacy');
 
         $response->assertOk();
-        $response->assertSee('the html.cloud plugin', false);
+        $response->assertSee('The html.cloud plugin for Claude', false);
+        $response->assertSee('<code>html-cloud</code> command-line tool', false);
         $response->assertSee('this name is not encrypted', false);
     }
 }
