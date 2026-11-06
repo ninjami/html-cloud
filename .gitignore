@@ -32,8 +32,9 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 
-# Machine-specific Claude Code dev-server config
+# Machine-specific Claude Code config
 /.claude/launch.json
 
 # The CLI has no dependencies; npm regenerates this on publish.
 /cli/package-lock.json
+/.claude/settings.local.json
